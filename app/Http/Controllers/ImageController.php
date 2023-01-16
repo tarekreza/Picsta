@@ -16,8 +16,9 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::latest()->get();
-        return view('index',compact('images'));
+        $user_id = Auth::user()->id;
+        $images = Image::where('user_id',$user_id)->latest()->get();
+        return view('myPicture',compact('images'));
     }
 
     /**
@@ -105,6 +106,8 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $image = Image::findOrFail($id);
+       $image->delete();
+        return redirect()->back();
     }
 }

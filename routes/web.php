@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
 
@@ -15,7 +16,8 @@ use App\Http\Controllers\ImageController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $images = Image::latest()->get();
+    return view('index',compact('images'));
 });
 Route::resource('Images', ImageController::class);
 

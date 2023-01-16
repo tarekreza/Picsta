@@ -5,18 +5,19 @@
             <div class="card-header">
                 <h3 class="card-title">Log in</h3>
             </div>
+            <x-jet-validation-errors class="mt-3 ml-3" />
             <form method="POST" id="quickForm" action="{{ route('login') }}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                            placeholder="Enter email">
+                        <x-jet-label for="email" value="{{ __('Email') }}" />
+                        <x-jet-input id="email" class="block mt-1 w-full form-control" type="email" name="email"
+                            :value="old('email')" required />            
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Password">
+                        <x-jet-label for="password" value="{{ __('Password') }}" />
+                        <x-jet-input id="password" class="block mt-1 w-full form-control" type="password" name="password" required
+                            autocomplete="new-password" />
                     </div>
                 </div>
                    
@@ -29,7 +30,9 @@
                         </a>
 
                     @endif
-                        <button type="submit" class="btn btn-danger ml-4 ">Submit</button>
+                        <x-jet-button class="btn btn-danger ml-4">
+                            {{ __('Log in') }}
+                        </x-jet-button>
                     </div>
 
             </form>
