@@ -21,6 +21,8 @@
 </head>
 
 <body class="hold-transition layout-top-nav">
+    @include('sweetalert::alert')
+
     <div class="wrapper">
 
         <!-- Navbar -->

@@ -5,6 +5,7 @@ use App\Models\Image;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 
 class ImageController extends Controller
@@ -62,7 +63,13 @@ class ImageController extends Controller
             'user_id' => Auth::user()->id,
         ]);
         $image->move('image/', $image_name);
-        return redirect()->back()->with('success', 'Picture uploaded successfully');
+
+        Alert::success('Success','Picture uploaded successfully');
+        // toast('Picture uploaded successfully','success');
+
+
+
+        return redirect()->back();
     }
     /**
      * Display the specified resource.

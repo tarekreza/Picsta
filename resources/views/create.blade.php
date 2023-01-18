@@ -1,12 +1,6 @@
 @extends('master')
 @section('content')
-<div class="container-fluid mt-5">
-  @if (session('success'))
-        <div class="alert alert-success alert-dismissible">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-          {{ session('success') }}
-        </div>
-        @endif
+<div class="col-md-8 mx-auto mt-5">
 
 <div class="card card-danger">
     <div class="card-header">
