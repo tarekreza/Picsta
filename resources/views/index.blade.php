@@ -51,13 +51,13 @@
 <!-- Ekko Lightbox -->
 <script src="../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../dist/js/adminlte.min.js"></script>
+<script src="/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
+<script src="/js/demo.js"></script>
 <!-- Filterizr-->
 <script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
 <!-- Page specific script -->
-<script>
+{{-- <script>
   $(function () {
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       event.preventDefault();
@@ -72,6 +72,6 @@
       $(this).addClass('active');
     });
   })
-</script>
+</script> --}}
 
 @endsection

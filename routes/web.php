@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BotManController;
 use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
@@ -30,3 +31,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+// BotMan
+// Route::get('/botman',[BotManController::class,'handle']);
+// Route::post('/botman',[BotManController::class,'handle']);
+Route::match(['get','post'],'/botman',[BotManController::class,'handle']);

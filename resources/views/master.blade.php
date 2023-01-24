@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{-- BotMan --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -105,7 +107,15 @@
             <strong>Copyright &copy; 2023 <a href="https://codexyard.com">Muhammad Tarek Reza</a>.</strong> All rights reserved.
         </footer>
     </div>
-
+    {{-- BotMan  --}}
+    <script>
+        var botmanWidget = {
+            title:'Picsta Bot',
+            aboutText:'',
+            introMessage: 'Hello! I\'m here to help you for uploading your images. If you need instruction then type \'yes\''    
+        };
+        </script>
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 
     <!-- jQuery -->
     <script src="/plugins/jquery/jquery.min.js"></script>
